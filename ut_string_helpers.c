@@ -1,3 +1,8 @@
+/*
+ * some helper functions to deal with uthash data structures that contain
+ * strings.
+ */
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -27,7 +32,7 @@ UT_array* split_new(const char* src, const char* delimiter) {
 	return tokens;
 }
 
-/* return a newly allocated UT_array that is a slice of src */
+/* return a newly allocated UT_array that is a (copied) slice of src */
 UT_array* slice_new(const UT_array* src, int start, int end) {
 
 	int i = start;
